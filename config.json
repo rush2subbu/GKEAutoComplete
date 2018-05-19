@@ -1,0 +1,5 @@
+{
+  "GCLOUD_PROJECT": "subbuletsbuy",
+  "CLOUD_BUCKET": "letsbuy",
+  "DATA_BACKEND": "datastore"
+}

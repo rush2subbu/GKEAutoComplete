@@ -1,0 +1,25 @@
+gcloud container clusters create letsbuy --scopes "cloud-platform" --num-nodes 2 --zone northamerica-northeast1-a
+
+gcloud container clusters delete letsbuy --zone northamerica-northeast1-a
+gsutil mb gs://letsbuy
+
+create a config.json
+{
+  "GCLOUD_PROJECT": "[YOUR_PROJECT_ID]",
+  "CLOUD_BUCKET": "[YOUR_CLOUD_BUCKET]",
+  "DATA_BACKEND": "datastore"
+}
+
+
+
+docker build -t gcr.io/subbugcptest/letsbuy .
+
+gcloud docker -- push gcr.io/subbugcptest/letsbuy
+
+create front end yaml
+
+kubectl create -f letsbuy-frontend-datastore.yaml
+
+kubectl get deployments (track the 3 front endpoints)
+
+gcloud beta container node-pools create letsbuy-node-pool --cluster letsbuy --zone northamerica-northeast1-a --min-cpu-platform “Intel Broadwell”
