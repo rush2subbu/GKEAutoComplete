@@ -7,7 +7,7 @@ class App extends Component {
     super(props)
 
     this.state = {
-      skuID: 6099990 // set initital Product SKU - GOOGLE - PIXEL 2 XL 
+      skuID: 6099990 // set initital Product SKU - GOOGLE - PIXEL 2 XL
     }
   }
   render() {
@@ -40,12 +40,12 @@ class App extends Component {
   } // end function
 
   fetchProductSku(skuID) {
-    let url = `https://api.bestbuy.com/v1/products(sku=${skuID})?show=sku,name,shortDescription,shippingCost,salePrice,image,categoryPath.name&&apiKey=60S5My3KNH44sz9TzuHX1nGk&format=json`
+    let url = `https://api.bestbuy.com/v1/products(sku=${skuID})?show=sku,name,shortDescription,shippingCost,salePrice,image,categoryPath.name&&apiKey=<API_KEY>&format=json`
     this.fetchApi(url)
   } // end function
 
   componentDidMount() {
-    let url = `https://api.bestbuy.com/v1/products(sku=${this.state.skuID})?show=sku,name,shortDescription,shippingCost,salePrice,image,categoryPath.name&&apiKey=60S5My3KNH44sz9TzuHX1nGk&format=json`
+    let url = `https://api.bestbuy.com/v1/products(sku=${this.state.skuID})?show=sku,name,shortDescription,shippingCost,salePrice,image,categoryPath.name&&apiKey=<API_KEY>&format=json`
     this.fetchApi(url)
 
     //========================= BLOODHOUND ==============================//
