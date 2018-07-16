@@ -32,7 +32,8 @@ If you would like to download the code and try it for yourself:
 ## Deploy to GCP App Engine:
 1. Create your project on GCP via console.cloud.google.com & enable billing
 2. Set the project parameter and use GCloud sdk to create app engine app : gcloud config set project <projectName-187904>
-3. Deploy to GCP App engine Flex : gcloud app deploy
+3. Create an app in the us-central regiong : cloud app create --region=us-central
+3. Deploy the app to the GCP App engine Flex : gcloud app deploy
 
 ## Browser Support
 This project makes usage of the Fetch API, utilising a polyfill for older browsers.
