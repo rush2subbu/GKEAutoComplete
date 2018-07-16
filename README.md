@@ -18,7 +18,7 @@ Key tools used in this React project are:
 
 NOTE: Subscribe to https://developer.bestbuy.com/ and obtain your API key to utilize theire Product Catalog in your project 
 
-## Installation
+## Local Installation
 [node.js](http://nodejs.org/download/) is required to get ``npm``.
 
 If you would like to download the code and try it for yourself:
@@ -28,6 +28,11 @@ If you would like to download the code and try it for yourself:
 2. Install packages: `npm install` and `bower install`
 3. Build project and launch: `gulp watch`
 4. Open your browser at: `http://localhost:2800`
+
+## Deploy to GCP App Engine:
+1. Create your project on GCP via console.cloud.google.com & enable billing
+2. Set the project parameter and use GCloud sdk to create app engine app : gcloud config set project <projectName-187904>
+3. Deploy to GCP App engine Flex : gcloud app deploy
 
 ## Browser Support
 This project makes usage of the Fetch API, utilising a polyfill for older browsers.
